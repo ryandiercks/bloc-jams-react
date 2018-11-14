@@ -1,32 +1,156 @@
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+body {
+  background-repeat: no-repeat;
+  background: radial-gradient(ellipse at center,rgba(249,219,15,.5) 0,
+                                                rgba(255,0,0,.5) 100%),
+              linear-gradient(45deg,rgba(249,219,15,.92),rgba(255,0,0,.92)) no-repeat fixed center;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 80px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #222;
+  height: 20px;
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header-nav {
+  text-align: left;
+}
+
+.App-header-nav a {
+  font-size: 20px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  vertical-align: middle;
+}
+
+a {
+  color: red;
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+.Library-album-image {
+  width: 30%;
+  height: auto;
+}
+.Library-album-title {
+  font-size: 16px;
+  height: 16px;
+}
+
+.Library-album-artist {
+  font-size: 14px;
+  height: 14px;
+}
+
+.Library-album-songs {
+  font-size: 8px;
+  height: 8px;
+  padding-bottom: 10px;
+}
+
+#album-cover-art {
+  width: 45%;
+  height: auto;
+}
+
+#album-title {
+  height: 8px;
+  padding: 2px;
+}
+
+#album-artist {
+  height: 8px;
+  padding: 2px;
+}
+
+#release-info {
+  height: 8px;
+  padding: 2px;
+}
+
+#song-info {
+  width: 20%;
+  padding: 10px;
+}
+
+#song-list {
+  font-size: 14px;
+  width: 100%;
+  table-layout: auto;
+  float: left;
+  padding: 5px;
+  background-color: rgba(255,255,255,0.15);
+}
+
+#song-number-action {
+  font-size: inherit;
+  width:  2px;
+  text-align: right;
+}
+
+#song-title {
+  text-align: left;
+  padding-right: 5px;
+}
+
+.song {
+  text-align: left;
+  font-size: 12px;
+}
+
+#song-duration {
+  text-align: right;
+}
+
+.player-bar {
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+}
+
+#currently-playing {
+  font-size: 18px;
+  color: black;
 }
