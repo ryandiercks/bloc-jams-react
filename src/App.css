@@ -13,9 +13,9 @@
 
 body {
   background-repeat: no-repeat;
-  background: radial-gradient(ellipse at center,rgba(249,219,15,.5) 0,
-                                                rgba(255,0,0,.5) 100%),
-              linear-gradient(45deg,rgba(249,219,15,.92),rgba(255,0,0,.92)) no-repeat fixed center;
+  background: radial-gradient(ellipse at center,rgba(0,191,255,.5) 0,
+                                                rgba(118,1,177,.5) 100%),
+              linear-gradient(45deg,rgba(0,191,255,.92),rgba(118,1,177,.92)) no-repeat fixed center;
 }
 
 .App {
@@ -50,10 +50,7 @@ body {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+
 
 button {
   padding: 0;
@@ -63,7 +60,7 @@ button {
 }
 
 a {
-  color: red;
+  color: Purple;
   font-weight: 500;
   font-size: 20px;
   text-decoration: none;
