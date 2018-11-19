@@ -77,31 +77,38 @@ a {
 }
 
 .Library-album-image {
-  width: 10%;
+  width: 4%;
   height: 10%;
   padding-left: 20px;
   padding-top: 20px;
+  float: left;
+  white-space: pre-wrap;
 
 }
 .Library-album-title {
   font-size: 16px;
   height: 16px;
+  white-space: pre-wrap;
 }
 
 .Library-album-artist {
   font-size: 14px;
   height: 14px;
+  white-space: pre-wrap;
 }
 
 .Library-album-songs {
   font-size: 12px;
   height: 12px;
   padding-bottom: 10px;
+  white-space: pre-wrap;
+
+
 }
 
 #album-cover-art {
-  width: 22%;
-  float: left;
+  padding-top: 10px;
+  width: 15%;
 }
 
 
@@ -127,9 +134,8 @@ a {
 
 #song-list {
   font-size: 14px;
-  width: 100%;
+  width: 80%;
   table-layout: auto;
-  float: left;
   padding: 5px;
   background-color: rgba(255,255,255,0.15);
 }
@@ -154,13 +160,14 @@ a {
   text-align: right;
 }
 
-.player-bar {
-  float: bottom;
-  width: 100%;
-  padding-top: 20px;
-}
-
 #currently-playing {
   font-size: 18px;
   color: black;
+}
+
+.player-bar{
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  padding: 10px;
 }

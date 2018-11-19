@@ -119,19 +119,6 @@ import PlayerBar from './PlayerBar';
             <div id="release-info">{ this.state.album.releaseInfo }</div>
           </div>
         </section>
-        <PlayerBar
-          isPlaying={this.state.isPlaying}
-          currentSong={this.state.currentSong}
-          currentTime={this.audioElement.currentTime}
-          duration={this.audioElement.duration}
-          currentVolume={this.audioElement.currentVolume}
-          handleSongClick={() => this.handleSongClick(this.state.currentSong)}
-          handlePrevClick={() => this.handlePrevClick()}
-          handleNextClick={() => this.handleNextClick()}
-          handleTimeChange={(e) => this.handleTimeChange(e)}
-          handleVolumeChange={(e) => this.handleVolumeChange(e)}
-          formatTime={(s) => this.formatTime(s)}
-        />
                 <section id="song-info">
           <table id="song-list" cellSpacing="0" cellPadding="0">
             <colgroup>
@@ -154,6 +141,19 @@ import PlayerBar from './PlayerBar';
                   </tr>
                 )
               }
+              <PlayerBar
+                isPlaying={this.state.isPlaying}
+                currentSong={this.state.currentSong}
+                currentTime={this.audioElement.currentTime}
+                duration={this.audioElement.duration}
+                currentVolume={this.audioElement.currentVolume}
+                handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+                handlePrevClick={() => this.handlePrevClick()}
+                handleNextClick={() => this.handleNextClick()}
+                handleTimeChange={(e) => this.handleTimeChange(e)}
+                handleVolumeChange={(e) => this.handleVolumeChange(e)}
+                formatTime={(s) => this.formatTime(s)}
+              />
             </tbody>
           </table>
         </section>
