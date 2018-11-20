@@ -119,46 +119,47 @@ import PlayerBar from './PlayerBar';
             <div id="release-info">{ this.state.album.releaseInfo }</div>
           </div>
         </section>
-                <section id="song-info">
-          <table id="song-list" cellSpacing="0" cellPadding="0">
-            <colgroup>
-              <col id="song-number-column" />
-              <col id="song-title-column" />
-              <col id="song-duration-column" />
-            </colgroup>
-            <tbody>
-              { this.state.album.songs.map( (song, index) =>
-                  <tr className="song" key={ index } onClick={() => this.handleSongClick(song)} >
-                    <td className="song-actions">
-                      <button id="list-button">
-                        <span><i className="material-icons md-light">play_circle_filled</i></span>
-                        <span><i className="material-icons md-light">pause_circle_filled</i></span>
-                      </button>
-                    </td>
-                    <td id="song-number">{ index + 1 }.</td>
-                    <td id="song-title">{ song.title }</td>
-                    <td id="song-duration">{ this.formatTime(song.duration) }</td>
-                  </tr>
-                )
-              }
-              <PlayerBar
-                isPlaying={this.state.isPlaying}
-                currentSong={this.state.currentSong}
-                currentTime={this.audioElement.currentTime}
-                duration={this.audioElement.duration}
-                currentVolume={this.audioElement.currentVolume}
-                handleSongClick={() => this.handleSongClick(this.state.currentSong)}
-                handlePrevClick={() => this.handlePrevClick()}
-                handleNextClick={() => this.handleNextClick()}
-                handleTimeChange={(e) => this.handleTimeChange(e)}
-                handleVolumeChange={(e) => this.handleVolumeChange(e)}
-                formatTime={(s) => this.formatTime(s)}
-              />
-            </tbody>
-          </table>
+        <section id="song-info">
+          <section className="player-container">
+            <table id="song-list" cellSpacing="0" cellPadding="0">
+              <colgroup>
+                <col id="song-number-column" />
+                <col id="song-title-column" />
+                <col id="song-duration-column" />
+              </colgroup>
+              <tbody>
+                { this.state.album.songs.map( (song, index) =>
+                    <tr className="song" key={ index } onClick={() => this.handleSongClick(song)} >
+                      <td className="song-actions">
+                        <button id="list-button">
+                          <span><i className="material-icons md-light">play_circle_filled</i></span>
+                          <span><i className="material-icons md-light">pause_circle_filled</i></span>
+                        </button>
+                      </td>
+                      <td id="song-number">{ index + 1 }.</td>
+                      <td id="song-title">{ song.title }</td>
+                      <td id="song-duration">{ this.formatTime(song.duration) }</td>
+                    </tr>
+                  )
+                }
+              </tbody>
+            </table>
+            <PlayerBar
+              isPlaying={this.state.iWsPlaying}
+              currentSong={this.state.currentSong}
+              currentTime={this.audioElement.currentTime}
+              duration={this.audioElement.duration}
+              currentVolume={this.audioElement.currentVolume}
+              handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+              handlePrevClick={() => this.handlePrevClick()}
+              handleNextClick={() => this.handleNextClick()}
+              handleTimeChange={(e) => this.handleTimeChange(e)}
+              handleVolumeChange={(e) => this.handleVolumeChange(e)}
+              formatTime={(s) => this.formatTime(s)}
+            />
+          </section>
         </section>
        </section>
-
      );
    }
  }
