@@ -19,6 +19,6 @@ server.listen(port, (err) => {
   if (err) {
     return console.log('Error', err);
         }
-console.log(`server is on ${port}`);
-}
-)
+console.log(`server is  on ${port}`);
+
+})
